@@ -1,0 +1,19 @@
+{
+  "name": "estudos-react",
+  "version": "1.0.0",
+  "description": "Repositorio para estudos de react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabsDonato/Estudos-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabsDonato/Estudos-React/issues"
+  },
+  "homepage": "https://github.com/GabsDonato/Estudos-React#readme"
+}
