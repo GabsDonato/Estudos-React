@@ -1,8 +1,16 @@
-// importa modulos
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-// semJSX 
+class MeuComponente extends React.Component{
 
-ReactDOM.render(<h1>Com JSX</h1>, document.getElementById('root'));
+    mensagem(nome){
+        alert(' Olá ' + nome);
+    }
+
+    render(){
+        return <button onClick={this.mensagem.bind(this, 'Gabriela')}>Clique aqui</button>;
+    }
+
+}
+    ReactDOM.render(<MeuComponente />, document.getElementById('root'));
