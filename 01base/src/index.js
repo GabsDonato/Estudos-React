@@ -4,24 +4,21 @@ import ReactDOM from 'react-dom';
 
 class MeuComponente extends React.Component{
 
-    mensagem(nome){
-        alert(' Olá ' + nome);
-    }
+    constructor(props){
+        super(props);
 
-    minhaArrowFunction = (curso) => {
-        alert('Estou fazendo o curso de ' + curso);
+        this.state = {texto:''};
     }
 
     render(){
         return(
-
             <div>
-                <button onClick={this.mensagem.bind(this, 'Gabriela')}>Clique aqui</button>
-                <button onClick={() => this.minhaArrowFunction('ReactJS')}>Arrow Function</button>
+                <h1></h1>
+                <input type='text' />
             </div>
-        ) ;
-        
+        );
     }
 
 }
-    ReactDOM.render(<MeuComponente />, document.getElementById('root'));
+
+ReactDOM.render(<MeuComponente />, document.getElementById('root'));
