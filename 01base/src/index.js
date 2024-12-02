@@ -16,11 +16,19 @@ class MeuComponente extends React.Component{
     }
 
     render(){
+
+        // vetor
+        let cores = ['Azul','Amarelo','Vermelho'];
+
+        //listar 
+        let listar = cores.map((cor,index) => {
+            return <li key={index}>{index} - {cor}</li>
+        });
+
         return(
-            <div>
-                <h1>{this.state.texto}</h1>
-                <input type='text' onChange={this.minhaFuncao} value={this.state.texto}/>
-            </div>
+           <ul>
+            {listar}
+           </ul>
         );
     }
 
