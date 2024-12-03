@@ -7,31 +7,19 @@ class MeuComponente extends React.Component{
     constructor(props){
         super(props);
 
-        this.state = {texto: this.props.textoInicial};
+        this.state = {cor: 'vermelha'}
     }
 
-    // função
-    minhaFuncao = (elemento) => {
-        this.setState({texto : elemento.target.value});
+    componentDidMount(){
+        setTimeout(() => {
+            this.setState({cor: 'azul'})
+        }, 2000);
     }
 
     render(){
-
-        // vetor
-        let cores = ['Azul','Amarelo','Vermelho'];
-
-        //listar 
-        let listar = cores.map((cor,index) => {
-            return <li key={index}>{index} - {cor}</li>
-        });
-
-        return(
-           <ul>
-            {listar}
-           </ul>
-        );
+        return <h1>minha cor preferida é {this.state.cor}</h1>
     }
 
 }
 
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...'/>, document.getElementById('root'));
+ReactDOM.render(<MeuComponente />, document.getElementById('root'));
